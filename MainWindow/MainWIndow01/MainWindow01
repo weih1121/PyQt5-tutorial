@@ -1,0 +1,18 @@
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtGui import QIcon
+
+class MainWindow(QMainWindow):                      #MainWindow继承自QMainWindow
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.resize(800, 400)
+
+        self.status = self.statusBar()              #创建状态栏
+        self.status.showMessage("StatusBar", 5000)  #状态栏显示信息 第一个参数显示状态栏内容 第二个参数显示持续时间
+        self.setWindowTitle("QMainWindow")          #设置windowTitle
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    win = MainWindow()
+    win.show()
+    sys.exit(app.exec_())

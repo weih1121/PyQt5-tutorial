@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>wangxizhi.jpg</file>
+  </qresource>
+</RCC>
